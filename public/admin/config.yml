@@ -12,31 +12,49 @@ collections:
       name: "home-badge"
       file: "content/home/index.md"
       fields:
-        - { label: "Photo", name: "photo", widget: "image"}
-        - { label: "Title", name: "title", widget: "string"}
-        - { label: "Description", name: "description", widget: "string"}
-        - { label: "Email", name: "email", widget: "string"}
+        - label: "Photo"
+          name: "photo"
+          widget: "image"
+        - label: "Title"
+          name: "title"
+          widget: "string"
+        - label: "Description"
+          name: "description"
+          widget: "string"
+        - label: "Email"
+          name: "email"
+          widget: "string"
         - label: "Links"
           name: "links"
           widget: list
           fields:
-            - { label: "Name", name: "name", widget: "string"}
-            - { label: "URL", name: "url", widget: "string"}
+            - label: "Name"
+              name: "name"
+              widget: "string"
+            - label: "URL"
+              name: "url"
+              widget: "string"
     - label: "Bio"
       name: "home-bio"
       file: "content/home/bio.md"
       fields:
-        - { label: "Content", name: "body", widget: "markdown"}
+        - label: "Content"
+          name: "body"
+          widget: "markdown"
     - label: "Research"
       name: "home-research"
       file: "content/home/research.md"
       fields:
-        - { label: "Content", name: "body", widget: "markdown"}
+        - label: "Content"
+          name: "body"
+          widget: "markdown"
     - label: "Contacts"
       name: "home-contacts"
       file: "content/home/contacts.md"
       fields:
-        - { label: "Content", name: "body", widget: "markdown"}
+        - label: "Content"
+          name: "body"
+          widget: "markdown"
   - name: "research"
     label: "Research Page"
     files:
@@ -44,21 +62,65 @@ collections:
       name: "research-content"
       file: "content/research.md"
       fields:
-        - { label: "Content", name: "body", widget: "markdown"}
+        - label: "Content"
+          name: "body"
+          widget: "markdown"
         - label: "Papers"
           name: "papers"
           widget: list
           fields:
-            - { label: "Author", name: "author", widget: "string"}
-            - { label: "Title", name: "title", widget: "string"}
-            - { label: "Extra", name: "extra", widget: "string", required: false}
+            - label: "Title"
+              name: "title"
+              widget: "string"
+            - label: "Author"
+              name: "author"
+              widget: "string"
+            - label: "Journal"
+              name: "journal"
+              widget: "object"
+              required: false
+              fields:
+                - label: "Name"
+                  name: "name"
+                  widget: "string"
+                - label: "URL"
+                  name: "url"
+                  widget: "string"
+                  required: false
+            - label: "Volume"
+              name: "volume"
+              widget: "string"
+              required: false
+            - label: "Pages"
+              name: "pages"
+              widget: "string"
+              required: false
+            - label: "Publisher"
+              name: "publisher"
+              required: false
+              widget: "object"
+              fields:
+                - label: "Name"
+                  name: "name"
+                  widget: "string"
+                - label: "URL"
+                  name: "url"
+                  widget: "string"
+                  required: false
+            - label: "Year"
+              name: "year"
+              widget: "number"
             - label: "Links"
               name: "links"
               widget: list
+              required: false
               fields:
-                - { label: "Name", name: "name", widget: "string"}
-                - { label: "URL", name: "url", widget: "string"}
-            - { label: "Year", name: "year", widget: "number"}
+                - label: "Name"
+                  name: "name"
+                  widget: "string"
+                - label: "URL"
+                  name: "url"
+                  widget: "string"
   - name: "teaching"
     label: "Teaching Page"
     files:
@@ -66,7 +128,10 @@ collections:
       name: "teaching-content"
       file: "content/teaching.md"
       fields:
-        - { label: "Content", name: "body", widget: "markdown", required: false}
+        - label: "Content"
+          name: "body"
+          widget: "markdown"
+          required: false
   - name: "seminars"
     label: "Seminars Page"
     files:
@@ -74,4 +139,6 @@ collections:
       name: "seminars-content"
       file: "content/seminars.md"
       fields:
-        - { label: "Content", name: "body", widget: "markdown"}
+        - label: "Content"
+          name: "body"
+          widget: "markdown"

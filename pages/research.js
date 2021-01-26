@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import Section from "../components/section.js";
-import FluidAnimation from "react-fluid-animation";
 import Link from "next/link";
+import FluidAnimation from "react-fluid-animation";
+
+import Section from "../components/section.js";
 import { attributes, react as Content } from "../content/research.md";
 
 const animationConfig = {

@@ -6,7 +6,7 @@ import { react as ContactsContent } from "../content/home/contacts.md";
 import { react as ResearchContent } from "../content/home/research.md";
 
 export default function Home() {
-  let { title, description, email, links, photo } = attributes;
+  const { title, description, email, links, photo } = attributes;
   return (
     <>
       <Badge
