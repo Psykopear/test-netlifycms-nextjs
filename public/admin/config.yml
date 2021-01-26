@@ -1,6 +1,6 @@
 backend:
-  name: git-gateway
-  # name: test-repo
+  # name: git-gateway
+  name: test-repo
   branch: main
 media_folder: public/img
 public_folder: img
@@ -8,10 +8,11 @@ collections:
   - name: "homepage"
     label: "Home Page"
     files:
-    - label: "Photo"
-      name: "home-photo"
+    - label: "Badge"
+      name: "home-badge"
       file: "content/home/index.md"
       fields:
+        - { label: "Photo", name: "photo", widget: "image"}
         - { label: "Title", name: "title", widget: "string"}
         - { label: "Description", name: "description", widget: "string"}
         - { label: "Email", name: "email", widget: "string"}
@@ -50,7 +51,7 @@ collections:
           fields:
             - { label: "Author", name: "author", widget: "string"}
             - { label: "Title", name: "title", widget: "string"}
-            - { label: "Extra", name: "extra", widget: "string"}
+            - { label: "Extra", name: "extra", widget: "string", required: false}
             - label: "Links"
               name: "links"
               widget: list
@@ -65,7 +66,7 @@ collections:
       name: "teaching-content"
       file: "content/teaching.md"
       fields:
-        - { label: "Content", name: "body", widget: "markdown"}
+        - { label: "Content", name: "body", widget: "markdown", required: false}
   - name: "seminars"
     label: "Seminars Page"
     files:

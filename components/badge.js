@@ -1,8 +1,8 @@
-const Splash = ({ title, description, email, links }) => {
+const Badge = ({ title, description, email, links, photo }) => {
   return (
     <div className="splash-wrapper">
       <div className="splash">
-        <img className="photo" src="foto.jpg" />
+        <img className="photo" src={photo} />
         <div className="content">
           <h1 className="head">{title}</h1>
           <p className="subhead">{description}</p>
@@ -28,4 +28,4 @@ const Splash = ({ title, description, email, links }) => {
   );
 };
 
-export default Splash;
+export default Badge;
