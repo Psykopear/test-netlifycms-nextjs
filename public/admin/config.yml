@@ -1,22 +1,51 @@
 backend:
   name: git-gateway
-  branch: master
+  # name: test-repo
+  branch: main
 media_folder: public/img
 public_folder: img
 collections:
   - name: "pages"
     label: "Pages"
     files:
-    - label: "Home"
+    - label: "Homepage - First section"
       name: "home"
-      file: "content/home.md"
+      file: "content/home/index.md"
       fields:
         - { label: "Title", name: "title", widget: "string"}
-        - { label: "Publish Date", name: "date", widget: "datetime" }
-        - { label: "Body", name: "body", widget: "markdown"}
-        - label: 'Cats'
-          name: "cats"
+        - { label: "Description", name: "description", widget: "string"}
+        - { label: "Email", name: "email", widget: "string"}
+        - label: "Links"
+          name: "links"
           widget: list
           fields:
             - { label: "Name", name: "name", widget: "string"}
-            - { label: "Description", name: "description", widget: "text"}
+            - { label: "URL", name: "url", widget: "string"}
+    - label: "Homepage - Bio section"
+      name: "Bio"
+      file: "content/home/bio.md"
+      fields:
+        - { label: "Content", name: "body", widget: "Markdown"}
+    - label: "Homepage - Research section"
+      name: "Research"
+      file: "content/home/research.md"
+      fields:
+        - { label: "Content", name: "body", widget: "Markdown"}
+    - label: "Homepage - Contacts section"
+      name: "Contacts"
+      file: "content/home/contacts.md"
+      fields:
+        - { label: "Content", name: "body", widget: "Markdown"}
+    - label: "Research page"
+      name: "home"
+      file: "content/home/index.md"
+      fields:
+        - { label: "Title", name: "title", widget: "string"}
+        - { label: "Description", name: "description", widget: "string"}
+        - { label: "Email", name: "email", widget: "string"}
+        - label: "Links"
+          name: "links"
+          widget: list
+          fields:
+            - { label: "Name", name: "name", widget: "string"}
+            - { label: "URL", name: "url", widget: "string"}

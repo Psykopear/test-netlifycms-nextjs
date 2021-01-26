@@ -1,12 +1,12 @@
 const Splash = ({ title, description, email, links }) => {
   return (
-    <div class="splash-wrapper">
-      <div class="splash">
-        <img class="photo" src="foto.jpg" />
-        <div class="content">
-          <h1 class="head">{title}</h1>
-          <p class="subhead">{description}</p>
-          <div class="contacts" id="_contacts">
+    <div className="splash-wrapper">
+      <div className="splash">
+        <img className="photo" src="foto.jpg" />
+        <div className="content">
+          <h1 className="head">{title}</h1>
+          <p className="subhead">{description}</p>
+          <div className="contacts" id="_contacts">
             <div>
               <b>Email</b>
               <pre>
