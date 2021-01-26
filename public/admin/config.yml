@@ -44,6 +44,20 @@ collections:
       file: "content/research.md"
       fields:
         - { label: "Content", name: "body", widget: "markdown"}
+        - label: "Papers"
+          name: "papers"
+          widget: list
+          fields:
+            - { label: "Author", name: "author", widget: "string"}
+            - { label: "Title", name: "title", widget: "string"}
+            - { label: "Extra", name: "extra", widget: "string"}
+            - label: "Links"
+              name: "links"
+              widget: list
+              fields:
+                - { label: "Name", name: "name", widget: "string"}
+                - { label: "URL", name: "url", widget: "string"}
+            - { label: "Year", name: "year", widget: "number"}
   - name: "teaching"
     label: "Teaching Page"
     files:
