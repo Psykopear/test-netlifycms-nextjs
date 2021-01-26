@@ -1,4 +1,4 @@
-import Splash from "../components/splash.js";
+import Badge from "../components/badge.js";
 import Section from "../components/section.js";
 import { attributes } from "../content/home/index.md";
 import { react as BioContent } from "../content/home/bio.md";
@@ -9,7 +9,7 @@ export default function Home() {
   let { title, description, email, links } = attributes;
   return (
     <>
-      <Splash
+      <Badge
         title={title}
         description={description}
         email={email}
