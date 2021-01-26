@@ -22,23 +22,23 @@ collections:
             - { label: "Name", name: "name", widget: "string"}
             - { label: "URL", name: "url", widget: "string"}
     - label: "Homepage - Bio section"
-      name: "HomeBio"
+      name: "home-bio"
       file: "content/home/bio.md"
       fields:
         - { label: "Content", name: "body", widget: "Markdown"}
     - label: "Homepage - Research section"
-      name: "HomeResearch"
+      name: "home-research"
       file: "content/home/research.md"
       fields:
         - { label: "Content", name: "body", widget: "Markdown"}
     - label: "Homepage - Contacts section"
-      name: "HomeContacts"
+      name: "home-contacts"
       file: "content/home/contacts.md"
       fields:
         - { label: "Content", name: "body", widget: "Markdown"}
     - label: "Research page"
-      name: "Research"
-      file: "content/home/index.md"
+      name: "research"
+      file: "content/research.md"
       fields:
         - { label: "Title", name: "title", widget: "string"}
         - { label: "Description", name: "description", widget: "string"}
