@@ -1,28 +1,31 @@
-import Head from "next/head"
-import { Component } from 'react'
-import { attributes, react as HomeContent } from '../content/home.md';
+import Splash from "../components/splash.js";
+import Section from "../components/section.js";
+import { attributes } from "../content/home/index.md";
+import { react as BioContent } from "../content/home/bio.md";
+import { react as ContactsContent } from "../content/home/contacts.md";
+import { react as ResearchContent } from "../content/home/research.md";
 
-export default class Home extends Component {
-  render() {
-    let { title, cats } = attributes;
-    return (
-      <>
-        <Head>
-          <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-        </Head>
-        <article>
-          <h1>{title}</h1>
-          <HomeContent />
-          <ul>
-            {cats.map((cat, k) => (
-              <li key={k}>
-                <h2>{cat.name}</h2>
-                <p>{cat.description}</p>
-              </li>
-            ))}
-          </ul>
-        </article>
-      </>
-    )
-  }
+export default function Home() {
+  let { title, description, email, links } = attributes;
+  return (
+    <>
+      <Splash
+        title={title}
+        description={description}
+        email={email}
+        links={links}
+      />
+      <div className="wrapper">
+        <Section>
+          <BioContent />
+        </Section>
+        <Section dark>
+          <ResearchContent />
+        </Section>
+        <Section>
+          <ContactsContent />
+        </Section>
+      </div>
+    </>
+  );
 }
