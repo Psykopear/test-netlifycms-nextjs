@@ -10,7 +10,7 @@ const Header = () => {
       </div>
 
       <div className="right">
-        <label HTMLfor="hamburger">&#9776;</label>
+        <label htmlFor="hamburger">&#9776;</label>
         <input type="checkbox" id="hamburger" />
         <div id="hamitems">
           <Link href="/research">Research</Link>

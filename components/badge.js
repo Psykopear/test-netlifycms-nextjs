@@ -14,7 +14,7 @@ const Badge = ({ title, description, email, links, photo }) => {
               </pre>
             </div>
             {links.map((l) => (
-              <div>
+              <div key={l.name}>
                 <b>{l.name}</b>
                 <pre>
                   <a href={`"${l.url}"`}>Download</a>

@@ -1,0 +1,70 @@
+/** Hamburger navigation **/
+#hamnav a,
+#hamnav a:visited,
+#hamnav a:hover {
+    text-decoration: none;
+}
+
+#hamitems {
+    a,a:visited,a:hover {
+        margin: 0 1em;
+    }
+}
+
+/* [ON BIG SCREEN] */
+/* Wrapper */
+#hamnav {
+    height: 75px;
+    background: #000000f0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+    font-size: 120%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0 1em;
+}
+
+/* Hide Hamburger */
+#hamnav label,
+#hamburger {
+    display: none;
+}
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 768px) {
+    /* Show Hamburger Icon */
+    #hamnav label {
+        display: inline-block;
+        color: var(--yellow);
+        font-style: normal;
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+    /* Break down menu items into vertical */
+    #hamitems a {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        padding-top: 0.6em;
+        padding-bottom: 0.6em;
+    }
+
+    /* Toggle Show/Hide Menu */
+    #hamitems {
+        display: none;
+    }
+    #hamnav input:checked ~ #hamitems {
+        display: block;
+        margin-top: 75px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: #000000e0;
+        padding: 1em;
+    }
+}
