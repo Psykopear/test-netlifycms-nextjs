@@ -1,4 +1,5 @@
 ---
+photo: img/foto.jpg
 title: Michele Dolceee
 description: Research assistant
 email: micheledolce@gmail.com
