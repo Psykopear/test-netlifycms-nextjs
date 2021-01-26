@@ -5,11 +5,11 @@ backend:
 media_folder: public/img
 public_folder: img
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: "homepage"
+    label: "HomePage"
     files:
-    - label: "Homepage - First section"
-      name: "home"
+    - label: "Photo"
+      name: "home-photo"
       file: "content/home/index.md"
       fields:
         - { label: "Title", name: "title", widget: "string"}
@@ -21,31 +21,42 @@ collections:
           fields:
             - { label: "Name", name: "name", widget: "string"}
             - { label: "URL", name: "url", widget: "string"}
-    - label: "Homepage - Bio section"
+    - label: "Bio"
       name: "home-bio"
       file: "content/home/bio.md"
       fields:
-        - { label: "Content", name: "body", widget: "Markdown"}
-    - label: "Homepage - Research section"
+        - { label: "Content", name: "body", widget: "markdown"}
+    - label: "Research"
       name: "home-research"
       file: "content/home/research.md"
       fields:
-        - { label: "Content", name: "body", widget: "Markdown"}
-    - label: "Homepage - Contacts section"
+        - { label: "Content", name: "body", widget: "markdown"}
+    - label: "Contacts"
       name: "home-contacts"
       file: "content/home/contacts.md"
       fields:
-        - { label: "Content", name: "body", widget: "Markdown"}
-    - label: "Research page"
-      name: "research"
+        - { label: "Content", name: "body", widget: "markdown"}
+  - name: "research"
+    label: "Research Page"
+    files:
+    - label: "Content"
+      name: "research-content"
       file: "content/research.md"
       fields:
-        - { label: "Title", name: "title", widget: "string"}
-        - { label: "Description", name: "description", widget: "string"}
-        - { label: "Email", name: "email", widget: "string"}
-        - label: "Links"
-          name: "links"
-          widget: list
-          fields:
-            - { label: "Name", name: "name", widget: "string"}
-            - { label: "URL", name: "url", widget: "string"}
+        - { label: "Content", name: "body", widget: "markdown"}
+  - name: "teaching"
+    label: "Teaching Page"
+    files:
+    - label: "Content"
+      name: "teaching-content"
+      file: "content/teaching.md"
+      fields:
+        - { label: "Content", name: "body", widget: "markdown"}
+  - name: "seminars"
+    label: "Seminars Page"
+    files:
+    - label: "Content"
+      name: "seminars-content"
+      file: "content/seminars.md"
+      fields:
+        - { label: "Content", name: "body", widget: "markdown"}
