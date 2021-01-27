@@ -3,6 +3,7 @@ backend:
   # name: test-repo
   branch: main
 media_folder: public/img
+publish_mode: editorial_workflow
 public_folder: img
 collections:
   - name: "homepage"
